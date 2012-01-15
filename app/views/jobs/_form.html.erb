@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :client_id %><br />
-	<%= f.select :client_id, Client.find(:all , :order => "name").collect {|c| [(c.name), c.id]} %>
+	<%= f.select :client_id, Client.find(:all , :order => "name").collect {|c| [(c.name), c.id]} %><%= link_to 'New Client', new_client_path %>
   </div>
   <div class="field">
     <%= f.label :start_date %><br />

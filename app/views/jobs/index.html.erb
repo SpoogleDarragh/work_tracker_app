@@ -1,34 +1,21 @@
-<h1>Listing jobs</h1>
+<h1>Work Tracker</h1>
+<p>The App that helps you keep track of your work!</p>
+<p><%= link_to 'New Job', new_job_path %></p>
 
-<table>
+<table id ="jobs">
   <tr>
-    <th>Title</th>
-    <th>Description</th>
+    <th>Job</th>
     <th>Status</th>
-    <th>Hourly rate</th>
-    <th>Hours spent</th>
-    <th>Cost</th>
-    <th>Client</th>
-    <th>Start date</th>
-    <th>Finished</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Hours</th>
+	<th>Cost</th>
   </tr>
 
 <% @jobs.each do |job| %>
   <tr>
-    <td><%= job.title %></td>
-    <td><%= job.description %></td>
+    <td><%= link_to job.title, job %> (<%=link_to  job.client.name%>)</td>
     <td><%= job.status %></td>
-    <td><%= job.hourly_rate %></td>
     <td><%= job.total_time_spent %></td>
-    <td><%= job.total_cost %></td>
-    <td><%= job.client_id %></td>
-    <td><%= job.start_date %></td>
-    <td><%= job.finished %></td>
-    <td><%= link_to 'Show', job %></td>
-    <td><%= link_to 'Edit', edit_job_path(job) %></td>
+	<td><%= number_to_currency(job.total_cost) %></td>
     <td><%= link_to 'Destroy', job, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>

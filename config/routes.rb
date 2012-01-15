@@ -1,4 +1,6 @@
 WorkTrackerApp::Application.routes.draw do
+  get "index/index"
+
   resources :clients
 
   resources :tasks
