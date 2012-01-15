@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @job.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @job.description %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @job.status %>
+</p>
+
+<p>
+  <b>Hourly rate:</b>
+  <%= @job.hourly_rate %>
+</p>
+
+<p>
+  <b>Hours spent:</b>
+  <%= @job.hours_spent %>
+</p>
+
+<p>
+  <b>Cost:</b>
+  <%= @job.cost %>
+</p>
+
+<p>
+  <b>Client:</b>
+  <%= @job.client_id %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @job.start_date %>
+</p>
+
+<p>
+  <b>Finished:</b>
+  <%= @job.finished %>
+</p>
+
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>

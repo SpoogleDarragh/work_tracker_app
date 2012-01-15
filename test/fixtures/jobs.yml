@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyString
+  status: MyString
+  hourly_rate: 9.99
+  hours_spent: 1
+  cost: 9.99
+  client_id: 1
+  start_date: 2012-01-15
+  finished: false
+
+two:
+  title: MyString
+  description: MyString
+  status: MyString
+  hourly_rate: 9.99
+  hours_spent: 1
+  cost: 9.99
+  client_id: 1
+  start_date: 2012-01-15
+  finished: false
