@@ -5,5 +5,11 @@
 // the compiled file.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require_tree .
+
+$(function() {
+		$( "input:submit, a, button", ".button" ).button();
+		$( "a", ".button" ).click(function() { return true; });
+	});

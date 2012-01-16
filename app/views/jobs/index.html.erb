@@ -1,6 +1,10 @@
 <h1>Work Tracker</h1>
 <p>The App that helps you keep track of your work!</p>
-<p><%= link_to 'New Job', new_job_path %></p>
+
+<div class="button">
+<%= link_to 'New Job', new_job_path %>
+</div>
+<br />
 
 <table id ="jobs">
   <tr>
@@ -12,15 +16,16 @@
 
 <% @jobs.each do |job| %>
   <tr>
-    <td><%= link_to job.title, job %> (<%=link_to  job.client.name%>)</td>
+    <td><%= link_to job.title, job %> (<%=job.client.name%>)</td>
     <td><%= job.status %></td>
     <td><%= job.total_time_spent %></td>
 	<td><%= number_to_currency(job.total_cost) %></td>
-    <td><%= link_to 'Destroy', job, confirm: 'Are you sure?', method: :delete %></td>
+    <td class="button"><%= link_to 'Delete', job, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
+<div class="button">
 <%= link_to 'New Job', new_job_path %>
+</div>

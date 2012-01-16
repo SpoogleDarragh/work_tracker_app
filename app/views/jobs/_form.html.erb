@@ -37,17 +37,17 @@
   </div>
   <div class="field">
     <%= f.label :client_id %><br />
-	<%= f.select :client_id, Client.find(:all , :order => "name").collect {|c| [(c.name), c.id]} %><%= link_to 'New Client', new_client_path %>
+	<%= f.select :client_id, Client.find(:all , :order => "name").collect {|c| [(c.name), c.id]} %><%= link_to 'New Client', new_client_path,{ :class=>'button' }%>
   </div>
   <div class="field">
     <%= f.label :start_date %><br />
-    <%= f.date_select :start_date %>
+    <%= f.date_select :start_date, :id=>"date" %>
   </div>
   <div class="field">
     <%= f.label :finished %><br />
     <%= f.check_box :finished %>
   </div>
-  <div class="actions">
+  <div class="actions button">
     <%= f.submit %>
   </div>
 <% end %>
